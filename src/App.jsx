@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { TodoProvider } from './context/todocontext'
-import { TodoContext } from './context/todocontext'
 import { useEffect } from 'react'
+import { TodoProvider } from './context/todocontext'
 import Todoform from './components/Todoform'
 import Todoitem from './components/Todoitem'
 
@@ -33,9 +32,12 @@ useEffect(()=>{
 
 
   return (
-    <TodoProvider value={{addTodo,deleteTodo,updateTodo,toggleComplete,todos}}>
-      <h1>in this we will discuss about react context api and persistent nature in local storage</h1>
+    <TodoProvider value={{addTodo,deleteTodo,updateTodo,toggleComplete}}>
       <div className="bg-[#172842] min-h-screen py-8">
+<div className='flex justify-center'>
+<h1 className='bg-gray-500 rounded-2xl items-center p-3 '>In this we use react context api and persistent nature in local storage</h1>
+ 
+</div>
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">
